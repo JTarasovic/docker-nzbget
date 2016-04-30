@@ -14,7 +14,7 @@ apt-get clean && rm -rf /var/lib/apt/lists/* /var/tmp/*
 ADD init/ /etc/my_init.d/
 ADD services/ /etc/service/
 RUN chmod -v +x /etc/service/*/run /etc/my_init.d/*.sh
- 
+
 #Mappings
-VOLUME /config /downloads
+VOLUME /config /downloads /logs
 EXPOSE 6789
